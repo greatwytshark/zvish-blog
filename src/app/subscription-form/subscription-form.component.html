@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-content">
+        <div>
+            <h4 class="center-align" style="color: var(--primary-color);">SUBSCRIPTION FORM</h4>
+            <P class="center-align #d50000 red-text text-accent-4"  *ngIf="!subscribed">Subscribe to get notifications when there is new content</P>
+            <P class="center-align" style="color: var(--primary-color);" *ngIf="subscribed">Thank you for subscribing</P>
+
+            <form #subscriptionForm = ngForm (ngSubmit)="onSubmit(subscriptionForm.value)" *ngIf="!subscribed">
+
+                
+                    <div class="row">
+                        <div class="input-field col s12 m5 l5">
+                            <textarea id="textarea1" class="materialize-textarea" name="name" ngModel></textarea>
+                            <label for="textarea1">Name</label>
+                        </div>
+                        <div class="input-field col s12 m5 l5">
+                            <textarea id="textarea1" class="materialize-textarea" name="email" ngModel></textarea>
+                            <label for="textarea2">Email</label>
+                        </div>
+                        <button class="btn-large col s12 m2 l2">Subscribe</button>
+                    </div>
+                    
+                   
+                   
+                
+
+            </form>
+        </div>
+    </div>
+</div>

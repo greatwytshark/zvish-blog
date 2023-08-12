@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-content">
+        <h4>Leave a comment</h4>
+
+        <form #commentForm=ngForm (ngSubmit)="onSubmit(commentForm.value)">
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea" name="name" ngModel></textarea>
+                    <label for="textarea1">Name</label>
+                </div>
+                
+                <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea" name="comment" ngModel></textarea>
+                    <label for="textarea1">Comment</label>
+                </div>
+                
+                <button class="btn-large col s12">Add a comment</button>
+            </div>
+        </form>
+    </div>
+</div>

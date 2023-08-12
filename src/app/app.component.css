@@ -1,0 +1,9 @@
+.app-body{
+    display: flex;
+    min-height: 35vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}

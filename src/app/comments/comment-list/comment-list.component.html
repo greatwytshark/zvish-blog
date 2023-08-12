@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="card-content">
+        <h4>Comments</h4>
+        <div class="comment-box" *ngFor="let comment of commentsData">
+            <h6>{{comment.data.name}}</h6>
+            
+            <small class="#dd2c00 deep-orange-text text-accent-4">{{comment.data.createdAt.toMillis() | date}}</small>
+
+            <div>
+                {{comment.data.comment}}
+            </div>
+            <a href="">Reply</a>
+            <a href="" class="#80d8ff light-blue-text text-accent-1" style="margin-left: 2%;">View Reply</a>
+
+            <hr>
+        </div>
+    </div>
+</div>

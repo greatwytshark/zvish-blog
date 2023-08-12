@@ -1,0 +1,16 @@
+<div class="card" *ngIf="postData" [routerLink]="['/post', postData.id]">
+    <div class="card-image">
+        <img src="{{postData.data.postImgPath}}" alt="" class="responsive-img">
+    </div>
+
+    <div class="card-content">
+        <small class="center-align #2962ff blue-text text-accent-4">{{postData.data.category.category}}  </small>
+        <small class="center-align #6a1b9a purple-text text-darken-3" *ngIf="postData.data.isFeatured">  Featured     </small>
+        <small class="center-align #aeea00 lime-text text-accent-4">  Views {{postData.data.views}}  </small>
+
+        <h5>{{postData.data.title}}</h5>
+        <p>{{postData.data.except}}</p>
+
+        <small class="#dd2c00 deep-orange-text text-accent-4">Last Updated: {{postData.data.createdAt.toMillis() | date}}</small>
+    </div>
+</div>

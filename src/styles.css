@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --primary-color: #026467;
+    --secondary-color: #E5F5EA;
+    --body-text-color: #596392;
+    --navbar-footer-color: #f9f9f9;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 12px;
+    color: var(--body-text-color);
+}
+
+.bg-secondary-theme{
+    background-color: var(--secondary-color);
+}
+
+.text-theme-primary{
+    color: var(--primary-color);
+}

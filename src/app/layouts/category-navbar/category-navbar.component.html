@@ -1,0 +1,21 @@
+<div class="navbar-fixed">
+    <nav class="nav-center">
+        <div class="nav-wrapper">
+            <div>
+                <a class="logo" routerLink="/">
+                    <h4 class="center-align">ZVISH-GOSSIP</h4>
+                </a>
+                
+                <ul class="" *ngFor="let item of categoryArray" style="float: none; text-align: center;">
+                    <li style="margin: 2px;"><a href=""
+                            [routerLink]="['category',item.data.category, item.id]">{{item.data.category}}</a></li>
+    
+    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+</div>
+

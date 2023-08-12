@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+
+.navbar-fixed{
+    height: 100px;
+    background-color: var(--navbar-footer-color);
+    
+    
+}
+
+.logo {
+    border-radius: 20px;
+    color: var(--primary-color);
+    font-size: 1.5em;
+    font-family: 'Caveat', cursive;
+    
+}

@@ -1,0 +1,30 @@
+<div class="container" style="margin-top: 78px;" *ngIf="postDetails">
+    <div class="row">
+        <div class="col s12 l7 m7">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{postDetails.postImgPath}}" class="responsive-img">
+                </div>
+                
+                <div class="card-content">
+                    <small class="center-align #2962ff blue-text text-accent-4">{{postDetails.category.category}} </small>
+                    <small class="center-align #6a1b9a purple-text text-darken-3" *ngIf="postDetails.isFeatured"> Featured </small>
+                    <small class="center-align #aeea00 lime-text text-accent-4">Views: {{postDetails.views}} </small>
+                    <small class="#dd2c00 deep-orange-text text-accent-4">Last updated {{postDetails.createdAt.toMillis() | date}}</small>
+
+                    <h4>{{postDetails.title}}</h4>
+                    <p [innerHTML]="postDetails.content"></p>
+                </div>
+            </div>
+
+            <app-comment-form [postId]="postId"></app-comment-form>
+            <app-comment-list [commentsData]="comments"></app-comment-list>
+        </div>
+        <div class="col s12 l3 m3">
+            <div *ngFor="let similarpost of similarPosts">
+                <app-post-card  [postData]="similarpost"></app-post-card>
+            </div>
+            
+        </div>
+    </div>
+</div>
